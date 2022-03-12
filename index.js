@@ -42,5 +42,10 @@ app.get("/abracadabra/conejo/:n", (req, res) => {
         : res.send("<center><img src='/voldemort.jpg' alt='Voldemort' /></center>")
 })
 
+//ruta generica de error
+app.get('/*', (req, res) => {
+    res.send('<center><h1>Esta página no existe...</h1> </center>')
+})
+
 //Escuchando servidor en puerto 3000
 app.listen(3000, () => console.log("Servidor levantado en puerto 3000"))
